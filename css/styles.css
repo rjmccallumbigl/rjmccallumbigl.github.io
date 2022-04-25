@@ -1,0 +1,77 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    margin: auto;
+    width: 70%;
+}
+
+nav ul,
+footer ul {
+    font-family: "Helvetica", "Arial", "Sans-Serif";
+    padding: 1em 0em 0em 0em;
+    list-style: none;
+    font-weight: bold;
+}
+
+nav ul li,
+footer ul li {
+    display: inline;
+    margin-right: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 5vw;
+    font-family: "Helvetica", "Arial", "Sans-Serif";
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+@media (max-width: 560px) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    p {
+        color: rgb(105, 105, 105);
+    }
+}
+
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+ul.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
+.lastfm {
+    text-align: center;
+}
