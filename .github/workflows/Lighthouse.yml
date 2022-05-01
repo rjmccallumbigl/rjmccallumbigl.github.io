@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - run: mkdir ${{ github.workspace }}/tmp/artifacts
+    - run: mkdir /tmp/artifacts
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@master
       with:
-        outputDirectory: ${{ github.workspace }}/tmp/artifacts
+        outputDirectory: /tmp/artifacts
         urls: 'https://rjmccallumbigl.github.io/'
     - name: Upload artifacts
       uses: actions/upload-artifact@master
