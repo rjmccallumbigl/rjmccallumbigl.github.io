@@ -12,7 +12,7 @@ jobs:
       with:
         outputDirectory: /tmp/artifacts
         urls: 'https://rjmccallumbigl.github.io/'
-        fooApiToken: ${{ secrets.FOO }}
+        fooApiToken: ${{ secrets.FOO_PAGE }}
     - name: Upload artifacts
       uses: actions/upload-artifact@master
       with:
