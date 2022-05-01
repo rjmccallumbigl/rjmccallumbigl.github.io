@@ -8,6 +8,10 @@
     color-scheme: light dark;
 }
 
+header {
+    color: #beb8b0;
+}
+
 body,
 .container {
     margin: auto;
@@ -145,6 +149,10 @@ footer ul {
 @media (prefers-color-scheme: dark) {
     p {
         color: #beb8b0;
+    }
+
+    .buttons img {
+        filter: grayscale(1) invert(.5);
     }
 }
 
