@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - run: mkdir /tmp/artifacts
+    - run: mkdir -p /tmp/artifacts
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@master
       with:
@@ -16,4 +16,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: Lighthouse reports
-        path: ${{ github.workspace }}/tmp/artifacts        
+        path: /tmp/artifacts        
