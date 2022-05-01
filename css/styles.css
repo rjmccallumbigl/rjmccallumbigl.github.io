@@ -28,7 +28,7 @@ a {
     letter-spacing: 1px;
 }
 
-a:hover {
+.container a:hover {
     text-decoration: underline;
 }
 
@@ -50,9 +50,42 @@ p {
 
 }
 
+/* https://css-tricks.com/css-link-hover-effects/ */
 .buttons * {
     height: 2vw;
-    padding: 1vw 0.25vw 0vw;
+    background-image: linear-gradient(to right,
+            #beb8b0,
+            #beb8b0 50%,
+            #999 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons *:before {
+    content: '';
+    background: #999;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons *:hover {
+    background-position: 0;
+}
+
+.buttons *:hover::before {
+    width: 100%;
 }
 
 /******************************************
@@ -112,6 +145,12 @@ footer ul {
 @media (prefers-color-scheme: dark) {
     p {
         color: #beb8b0;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .buttons * {
+        background-image: linear-gradient(to right, #999, #999 50%, #000 50%);
     }
 }
 
