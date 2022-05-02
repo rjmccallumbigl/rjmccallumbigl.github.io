@@ -48,6 +48,7 @@ h1 {
     text-overflow: ellipsis;
     text-align: center;
     letter-spacing: 0.25vw;
+    margin: 1vw 0;
 }
 
 p {
@@ -60,8 +61,7 @@ p {
 
 /* https://css-tricks.com/css-link-hover-effects/ */
 .buttons * {
-    padding: 1vw 0.25vw;
-    height: 2vw;
+    padding: 1vw 0.1vw;
     background-image: linear-gradient(to right,
             #beb8b0,
             #beb8b0 50%,
@@ -167,10 +167,6 @@ footer ul {
 }
 
 @media (max-width: 560px) {
-    p {
-        /* font-size: .75em; */
-    }
-
     nav {
         text-align: center;
         padding: 0vw 2vw 0vw 2vw;
@@ -181,6 +177,15 @@ footer ul {
     footer {
         overflow-wrap: anywhere;
     }
+
+    .lastfm {
+        width: 92vw;
+        max-width: 100vw;
+        margin-left: -46vw;
+        margin-right: -50vw;
+        position: relative;
+        left: 50%;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -190,8 +195,21 @@ footer ul {
         width: 100%;
     }
 
-    .buttons * {
-        height: 4vw;
+    span.buttons>a {
+        /* height: 4vw; */
+        /* padding: 1vw 1vw; */
+        /* padding: 1vw 0.25vw; */
+        /* padding: 0 0; */
+    }
+}
+
+@media (min-width: 1280px) {
+    span.buttons>a {
+        padding: 0vw 0.25vw;
+    }
+
+    span.buttons img {
+        padding: 1vw 0.2vw 0vw 0.2vw;
     }
 }
 
@@ -202,8 +220,9 @@ footer ul {
         width: 100%;
     }
 
-    .buttons * {
+    span.buttons img {
         height: 48px;
         width: 48px;
+        padding: 1vw 1.25vw;
     }
 }
